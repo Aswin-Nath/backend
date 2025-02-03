@@ -20,6 +20,7 @@ const db = mysql.createConnection({
   },
 });
 
+
 // Connect to MySQL
 db.connect((err) => {
   if (err) {
@@ -94,7 +95,8 @@ app.get("/faqs", (req, res) => {
     }
     res.json(result);
   });
-});
+});   
+
 
 app.delete("/delete-faq/:id", (req, res) => {
   const { id } = req.params;
